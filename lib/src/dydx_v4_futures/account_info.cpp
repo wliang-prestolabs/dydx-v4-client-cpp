@@ -17,7 +17,7 @@
 
 #include <dydx_v4_futures/constants.h>
 #include <dydx_v4_futures/exchange_info.h>
-#include <dydx_v4_futures/requests/node_grpc_gateway.h>
+// #include <dydx_v4_futures/requests/node_grpc_gateway.h>
 #include <dydx_v4_futures/types.h>
 
 namespace dydx_v4_client_lib {
@@ -81,21 +81,23 @@ LocalAccountInfo LocalAccountInfo::FromMnemonic(std::string mnemonic, uint32_t s
 
 AccountInfo AccountInfo::Retrieve(const ExchangeConfig& exchange_config, LocalAccountInfo local_account_info)
 {
-    auto account_info = NodeGrpcGatewayRestClient(exchange_config).GetAccount(local_account_info.GetAccountAddress());
+    // TODO(daniel):
+    // auto account_info = NodeGrpcGatewayRestClient(exchange_config).GetAccount(local_account_info.GetAccountAddress());
 
-    AccountNumber account_number = -1;
-    uint64_t sequence = 0;
-    if (!account_info.contains("code")) {
-        account_number =
-            static_cast<uint32_t>(std::stoul(account_info["account"]["account_number"].template get<std::string>()));
-        sequence = std::stoull(account_info["account"]["sequence"].template get<std::string>());
-    }
+    // AccountNumber account_number = -1;
+    // uint64_t sequence = 0;
+    // if (!account_info.contains("code")) {
+    //     account_number =
+    //         static_cast<uint32_t>(std::stoul(account_info["account"]["account_number"].template get<std::string>()));
+    //     sequence = std::stoull(account_info["account"]["sequence"].template get<std::string>());
+    // }
 
-    return AccountInfo {
-        .local_account_info = std::move(local_account_info),
-        .account_number = account_number,
-        .sequence = sequence,
-    };
+    // return AccountInfo {
+    //     .local_account_info = std::move(local_account_info),
+    //     .account_number = account_number,
+    //     .sequence = sequence,
+    // };
+    return AccountInfo {};
 }
 
 }  // namespace dydx_v4_client_lib

@@ -8,8 +8,8 @@
 #include <nlohmann/json.hpp>
 
 #include <common/encoding/base64.h>
-#include <common/requests/base.h>
-#include <common/requests/util.h>
+// #include <common/requests/base.h>
+// #include <common/requests/util.h>
 
 #include <dydx_v4_futures/account_info.h>
 #include <dydx_v4_futures/types.h>

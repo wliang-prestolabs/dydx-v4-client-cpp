@@ -4,8 +4,8 @@
 #include <map>
 #include <string>
 
-#include <common/requests/base.h>
-#include <common/streams/base.h>
+// #include <common/requests/base.h>
+// #include <common/streams/base.h>
 #include <common/types.h>
 
 #include <dydx_v4_futures/instrument_info.h>
@@ -17,10 +17,10 @@ struct ExchangeConfig {
     std::string chain_id;
     uint64_t fee_minimum_gas_price;
     std::string fee_denom;
-    std::optional<common::RestConfig> node_grpc_gateway_rest_config = std::nullopt;
-    std::optional<common::RestConfig> node_tendermint_rest_config = std::nullopt;
-    std::optional<common::RestConfig> indexer_rest_config = std::nullopt;
-    std::optional<common::WsConfig> indexer_ws_config = std::nullopt;
+    // std::optional<common::RestConfig> node_grpc_gateway_rest_config = std::nullopt;
+    // std::optional<common::RestConfig> node_tendermint_rest_config = std::nullopt;
+    // std::optional<common::RestConfig> indexer_rest_config = std::nullopt;
+    // std::optional<common::WsConfig> indexer_ws_config = std::nullopt;
 };
 
 struct ExchangeInfo {
